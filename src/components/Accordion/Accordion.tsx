@@ -6,7 +6,7 @@ type AccordionPropsType = {
 }
 
 function Accordion(props: AccordionPropsType) {
-    console.log("Accordion rendering")
+    console.log("UnControlledAccordion rendering")
     return (
             <div>
                 <AccordionTitle title={props.titleValue}/>
@@ -17,7 +17,7 @@ function Accordion(props: AccordionPropsType) {
 
 }
 function Accordion2(props: AccordionPropsType) {
-    console.log("Accordion rendering")
+    console.log("UnControlledAccordion rendering")
     if (props.collapsed === true) {
         return (
             <div>
