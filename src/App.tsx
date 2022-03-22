@@ -10,6 +10,7 @@ import UnControlledRating from "./components/UnControlledRating/UnControlledRati
 function App() {
 
     let[ratingValue, setRatingValue] = useState<RatingValueType>(0)
+    let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
 
     return (
         <div className={'App'}>
@@ -19,8 +20,12 @@ function App() {
 
             <UnControlledAccordion titleValue={'UncontroledMenu'}/>
             <UnControlledAccordion titleValue={'UncontroledUsers'}/>
-            {/*      <Accordion titleValue={"Menu"} collapsed={true}/>
-            <Accordion titleValue={"Users"} collapsed={false}/>*/}
+
+           <Accordion titleValue={"Menu"}
+                      collapsed={accordionCollapsed}
+                      onChange={() => setAccordionCollapsed(!accordionCollapsed)}/>
+           {/* <Accordion titleValue={"Users"} collapsed={false}/>*/}
+
             Article UnControlled
             <UnControlledRating/>  {/*нету props, так данные в локальном стейте  компонента UnControlledRating*/}
             Article 3

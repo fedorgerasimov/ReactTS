@@ -3,19 +3,23 @@ import React from "react";
 type AccordionPropsType = {
     titleValue: string,
     collapsed: boolean
+    onChange: () => void
 }
 
 function Accordion(props: AccordionPropsType) {
     console.log("UnControlledAccordion rendering")
     return (
             <div>
-                <AccordionTitle title={props.titleValue}/>
+                <AccordionTitle title={props.titleValue}
+                                onChange={props.onChange}
+                />
                 {props.collapsed === false && <AccordionBody/>}
              {/* { !props.collapsed && <AccordionBody/>}*/}
             </div>
         )
 
 }
+/*переписали логику Accordion
 function Accordion2(props: AccordionPropsType) {
     console.log("UnControlledAccordion rendering")
     if (props.collapsed === true) {
@@ -32,15 +36,16 @@ function Accordion2(props: AccordionPropsType) {
             </div>
         )
     }
-}
+}*/
 
 type AccordionTitlePropsType = {
     title: string
+    onChange: () => void
 }
 function AccordionTitle(props: AccordionTitlePropsType) {
     return (
         <div>
-            <h3> ---{props.title}--- </h3>
+            <h3 onClick={props.onChange}> ---{props.title}--- </h3>
         </div>
     )
 }
