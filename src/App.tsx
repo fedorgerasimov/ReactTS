@@ -15,7 +15,7 @@ function App() {
             <ImgStar/>
             <PageTitle title={"This is APP component"}/>
             Article 1
-            <Rating value={5}/>
+
             <UnControlledAccordion titleValue={'UncontroledMenu'}/>
             <UnControlledAccordion titleValue={'UncontroledUsers'}/>
             {/*      <Accordion titleValue={"Menu"} collapsed={true}/>
@@ -23,12 +23,12 @@ function App() {
             Article UnControlled
             <UnControlledRating/>  {/*нету props, так данные в локальном стейте  компонента UnControlledRating*/}
             Article 3
-            <Rating value={0}/>
+         {/*   <Rating value={0}/>
             <Rating value={1}/>
             <Rating value={2}/>
             <Rating value={3}/>
             <Rating value={4}/>
-            <Rating value={5}/>
+            <Rating value={5}/>*/}
         </div>
     );
 }
