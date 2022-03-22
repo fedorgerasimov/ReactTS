@@ -1,26 +1,26 @@
 import React, {useState} from "react";
 
 type PropsType = {
-/*    on: boolean*/
+    on: boolean
+    onChange: ( on: boolean) => void
 }
 
 export const OnOff =(props: PropsType) => {
 
-    let[on, setOn] = useState(false)  // изолировали компоненту, сделали локальный стейт
 
     const onStyle = {
         width: '30px',
         height: '20px',
         border: '1px solid black',
         display: 'inline-block',
-        backgroundColor: /*props.*/on ? 'green' : 'white'
+        backgroundColor: /*props.*/props.on ? 'green' : 'white'
     }
     const offStyle = {
         width: '30px',
         height: '20px',
         border: '1px solid black',
         display: 'inline-block',
-        backgroundColor: /*props.*/on ? 'white' : 'red'
+        backgroundColor: /*props.*/props.on ? 'white' : 'red'
     }
     const indicatorStyle = {
         width: '10px',
@@ -29,13 +29,13 @@ export const OnOff =(props: PropsType) => {
         border: '1px solid black',
         display: 'inline-block',
         marginLeft: '5px',
-        backgroundColor: /*props.*/on ? 'green' : 'red'
+        backgroundColor: /*props.*/props.on ? 'green' : 'red'
     }
 
-        return (
+    return (
         <div>
-            <div style={onStyle} onClick={ ()=> setOn(true)}>On</div>
-            <div style={offStyle} onClick={ ()=> setOn(false)}>Off</div>
+            <div style={onStyle} onClick={ ()=> props.onChange(true)}>On</div>
+            <div style={offStyle} onClick={ ()=> props.onChange(false)}>Off</div>
             <div style={indicatorStyle}></div>
         </div>
     )
