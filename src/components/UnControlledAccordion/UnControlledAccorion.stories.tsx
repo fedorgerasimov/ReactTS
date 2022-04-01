@@ -10,19 +10,8 @@ export default  {
 
 const callback = action('uncontrolled accordion mode change')
 
-export const MenuCollapsedMode = () => <UnControlledAccordion titleValue={'Menu'}  />
-export const UsersUnCollapsedMode = () => <UnControlledAccordion titleValue={'Users'}/>
-
-
 export const ModeChanging = () => {
-    let [collapsed, setCollapsed] = useState<boolean>(false);
-    return (
-        <div>
-            <AccordionTitle title={props.titleValue} onClick={()=>setCollapsed(!collapsed)}/>
-            { !collapsed && <AccordionBody/>}
-        </div>
-    )
-
+    return<UnControlledAccordion titleValue={'Users'}/>
 }
 
 
