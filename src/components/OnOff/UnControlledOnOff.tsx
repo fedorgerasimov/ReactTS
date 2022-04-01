@@ -1,12 +1,14 @@
 import React, {useState} from "react";
 
-type PropsType = {
+export type PropsType = {
     onChange: (on:boolean) => void
+    defaultOn?: boolean
+    defaultOff?:boolean
 }
 
 export const UnControlledOnOff =(props: PropsType) => {
 
-    let[on, setOn] = useState(false)  // изолировали компоненту, сделали локальный стейт
+    let[on, setOn] = useState(props.defaultOn? props.defaultOn:false)  // изолировали компоненту, сделали локальный стейт
 
     const onStyle = {
         width: '30px',

@@ -1,10 +1,18 @@
 import React, {useState} from "react";
 
+export type RatingValueType = 0 | 1 | 2 | 3 | 4 | 5
 
 
-function UnControlledRating(props: any) {
+type RatingPropsType = {
+   defaultValue?: RatingValueType
+    onChange: (value: RatingValueType) => void
+}
+
+
+
+export const UnControlledRating = (props: RatingPropsType) => {
     console.log("UnControlledRating rendering")
-    let [value, setValue] = useState( 0) // создали локальный стейт, присвоили начальное значение
+    let [value, setValue] = useState( props.defaultValue ? props.defaultValue : 0) // создали локальный стейт, присвоили начальное значение
     return (                                        // установил значение 0 => выделенные 0 звездочек
         <div>
             <Star selected={value>0} setValue={setValue} value={1}/>
@@ -36,4 +44,3 @@ function Star(props: StartPropsType) {
     }
 }*/
 
-export default UnControlledRating;
