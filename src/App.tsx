@@ -5,7 +5,7 @@ import Rating, { RatingValueType} from "./components/Rating/Rating";
 import ImgStar from "./components/Rating/ImgStar";
 import {OnOff} from "./components/OnOff/OnOff";
 import UnControlledAccordion from "./components/UnControlledAccordion/UnControlledAccordion";
-import UnControlledRating from "./components/UnControlledRating/UnControlledRating";
+import {UnControlledRating} from "./components/UnControlledRating/UnControlledRating";
 import { UnControlledOnOff } from './components/OnOff/UnControlledOnOff';
 
 
