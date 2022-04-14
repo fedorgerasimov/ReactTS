@@ -1,6 +1,6 @@
 import React, {ChangeEvent, useRef, useState} from 'react';
 import {action} from '@storybook/addon-actions'
-import {OnOff} from "./OnOff/OnOff";
+import {OnOff} from "../OnOff/OnOff";
 
 export default {
     title: 'Input',

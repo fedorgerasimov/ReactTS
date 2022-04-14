@@ -1,6 +1,6 @@
 import React, {ChangeEvent, useRef, useState} from 'react';
 import {action} from '@storybook/addon-actions'
-import Rating from './Rating/Rating'
+import Rating from '../Rating/Rating'
 
 export default {
     title: 'UncontrolledInput',
