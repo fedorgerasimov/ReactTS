@@ -28,9 +28,9 @@ function App() {
             <UnControlledRating/>  {/*нету props, так данные в локальном стейте  компонента UnControlledRating*/}
 
             <UnControlledAccordion titleValue={'Uncontroled Menu'}/>
-            <Accordion titleValue={"Menu"}
+        {/*    <Accordion titleValue={"Menu"}
                       collapsed={accordionCollapsed}
-                      onChange={() => setAccordionCollapsed(!accordionCollapsed)}/>
+                      onChange={() => setAccordionCollapsed(!accordionCollapsed)}/>*/}
 
         </div>
     );
