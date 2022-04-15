@@ -1,7 +1,22 @@
-.select {
+.select .main {
     border: 1px black solid;
+    display: inline-block;
+    min-height: 20px;
+    min-width: 30px;
 }
 
 .items{
-    border: 1px 
+    position: absolute;
+    padding: 5px;
+    border: 1px #3886c2 solid;
 }
+
+.item.selected {
+    background-color: #8331b1;
+    color: white;
+}
+/*
+
+.select.active .items{
+    display: block;
+}*/
