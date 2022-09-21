@@ -6,7 +6,7 @@ export default {
 }
 
 const UsersSecret = (props: { users: Array<string> }) => {
-    debugger
+
     console.log(' USERS SECRET ')
     return <div> {
         props.users.map((u, i) => <div key={i}>{u} </div>)

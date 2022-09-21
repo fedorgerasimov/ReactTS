@@ -36,7 +36,7 @@ export const LikeUseCallback = () => {
 }
 
 const BooksSecret = (props: { addBook: () => void }) => {
-    //debugger
+
     console.log(' BooksSecret')
     return <div>
         <button onClick={() => props.addBook()}>add book</button>
